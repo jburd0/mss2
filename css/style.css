@@ -1,0 +1,444 @@
+/*=======================================================*/
+/* style for fp.mtngrove.com ===========================*/
+/*=====================================================*/
+
+body {
+	font-family: sans-serif;
+	margin: 0;
+	background-color: #e6e6e6;
+	padding: 0 26px;
+}
+
+[role="header"] {
+	width: 100%;
+	height: 75px;
+}
+
+[role="navigation-bar"] {
+	z-index: 10;
+	background: -webkit-linear-gradient(bottom, #74a1fb, #eff2ff);
+	background: -moz-linear-gradient(bottom, #74a1fb, #eff2ff);
+	background: linear-gradient(bottom, #74a1fb, #eff2ff);
+	-webkit-box-shadow: 0 2px 5px black;
+	-moz-box-shadow: 0 2px 5px black;
+	box-shadow: 0 2px 5px black;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 75px;
+	margin: 0 auto;
+}
+
+.nav-container {
+	max-width: 1000px;
+	height: 75px;
+	margin: 0 auto;
+}
+.nav-container ul, .nav-container h1 {
+	line-height: 75px;
+	margin: 0;
+	vertical-align: center;
+}
+.nav-container h1 {
+	float: left;
+	font-size: 26px;
+	color: #1a1a1a;
+}
+.nav-container ul {
+	padding: 0;
+	list-style-type: none;
+	float: right;
+}
+.nav-container ul li {
+	display: inline;
+	margin-right: 1.5em;
+	font-size: 18px;
+}
+.nav-container ul li a {
+	text-decoration: none;
+	color: white;
+}
+.nav-container ul li a:hover {
+	color: black;
+	text-decoration: underline;
+}
+
+/*=======================================================*/
+/* end navigation bar style ============================*/
+/*=====================================================*/
+
+/*=======================================================*/
+/* basic structure of all pages ========================*/
+/*=====================================================*/
+
+.container {
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	background-size: 100%;
+	background: #58ACFA;
+	background-repeat: no-repeat;
+	-webkit-box-shadow: 0 2px 5px black;
+	-moz-box-shadow: 0 2px 5px black;
+	box-shadow: 0 2px 5px black;
+	-webkit-box-sizing: border-box;
+	-mox-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.main {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-right: 16px;
+	padding-left: 16px;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	max-width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/*=======================================================*/
+/* style specific for login drop-down menu =============*/
+/*=====================================================*/
+
+.login-slide {
+	-webkit-box-shadow: 2px 2px 3px black;
+	-moz-box-shadow: 2px 2px 3px black;
+	box-shadow: 2px 2px 3px black;
+	-webkit-box-sizing: border-box;
+	-mox-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 10px;
+	position: absolute;
+	left: 0;
+	border-radius: 0 0 10px 10px;
+	background-color: #9d0825;
+}
+
+/*=======================================================*/
+/* X 'button ===========================================*/
+/*=====================================================*/
+
+.login-slide [role="escape"] {
+	margin-bottom: 2em;
+	text-decoration: none;
+	color: red;
+}
+
+[role="login-header"] h2 {
+	color: #1a1a1a;
+	margin-bottom: 5px;
+	line-height: 1.5;
+	border-bottom: 1px solid black;
+}
+
+[role="login-header"] h2 small {
+	font-size: .5em;
+}
+
+form {
+	padding: 10px;
+	margin: 0;
+}
+
+form [role="login-field-container"] {
+	background-color: white;
+	border: none;
+	border-radius: 2px;
+	margin: 0;
+}
+
+form input, form label {
+	display: block;
+}
+
+form input[type="text"], form input[type="password"] {
+	-webkit-box-shadow: 0 0 3px black inset;
+	-moz-box-shadow: 0 0 3px black inset;
+	box-shadow: 0 0 3px black inset;
+	height: 2.5em;
+	border: none;
+	border-radius: 3px;
+	margin-bottom: 1em;
+}
+
+/*=======================================================*/
+/* end login specific style ============================*/
+/*=====================================================*/
+
+[role="banner"] {
+	-webkit-box-sizing: border-box;
+	-mox-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-top: 20px;
+	padding-bottom: 5px;
+	width: 100%;
+	vertical-align: bottom;
+	font-size: 1.3em;
+	border-bottom: 1px solid white;
+}
+
+[role="banner"] h1 {
+	margin-bottom: 0;
+	color: white;
+	font-size: 2em;
+}
+
+[role="banner"] small {
+	color: #c3cff9;
+}
+
+[role="banner"] small a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #f15774;
+}
+
+[role="banner"] small a:hover {
+	text-decoration: underline;
+}
+
+/*=======================================================*/
+/* style specific for index.php ========================*/
+/*=====================================================*/
+
+.store-info {
+	-webkit-box-sizing: border-box;
+	-mox-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-top: 10px;
+	width: 100%;
+}
+
+.store-info h2, p {
+	color: white;
+}
+
+.store-info h2 {
+	text-decoration: underline;
+}
+
+.store-info p B {
+	color: #c3cff9;
+}
+	
+/*=======================================================*/
+/* style specific for admin ============================*/
+/*=====================================================*/
+
+.admin-content {
+	margin: 0;
+	padding: 10px;
+}
+
+.admin-tools {	
+	padding: 10px;
+	background-color: white;
+	border-radius: 2px;
+}
+
+.admin-tools h2 {
+	margin-bottom: 5px;
+	line-height: 1.5;
+	border-bottom: 1px solid black;
+}
+
+.admin-tools h2 small {
+	font-size: .5em;
+}
+
+.admin-tools h2 small a {
+	text-decoration: none;
+	color: red;
+}
+
+/*=======================================================*/
+/* style specific for the image upload section =========*/
+/*=====================================================*/
+
+.img-upload, .img-display {
+	-webkit-box-sizing: border-box;
+	-mox-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+	margin-top: 10px;
+	overflow: hidden;
+	border-radius: 5px;
+}
+
+.img-display {
+	padding: 10px;
+	background-color: rgba(230, 230, 240, .7);
+}
+
+.img-upload h2, p {
+	color: black;
+}
+
+.img-upload form {
+	padding: 0;
+}
+
+.img-upload .upload-location {
+	margin: 0;
+	padding: 10px;
+	background-color: rgba(230, 230, 240, .5);
+}
+
+.img-upload .upload-select {
+	margin: 0;
+	padding: 10px;
+	background-color: rgba(230, 230, 240, .3);
+}
+
+.upload-select img {
+	height: 200px;
+	margin-bottom: 10px;
+	border-radius: 3px;
+}
+
+.upload-select input[type="textarea"], input[type="submit"] { /* make sure fields are displayed side by side */
+	display: inline;
+}
+
+.upload-select input[type="textarea"] {
+	border: none;
+	border-radius: 2px;
+	-webkit-box-shadow: 0 0 3px black inset;
+	-moz-box-shadow: 0 0 3px black inset;
+	box-shadow: 0 0 3px black inset;
+	height: 36px;
+	width: 250px;
+	font-weight: bold;
+	padding-left: 5px;
+}
+
+input[type="submit"] {
+	border: none;
+	background-color: white;
+	height: 35px;
+	padding: 0 10px;
+	margin: 0 auto 0 10px;
+	border-radius: 3px;
+	color: #44353b;
+	font-weight: bold;
+	font-family: "Comic Sans MS";
+	font-size: 16px;
+}
+
+.upload-location label[for="updir"], select[name="updir"] { /* make sure fields are displayed side by side */
+	color: #2c3141;
+	display: inline;
+}
+
+/*=======================================================*/
+/* style for the image display: hmark, arg, pden, dshop */
+/*=====================================================*/
+
+.display-container {
+	width: 456px;
+	height: 456px;
+	float: left;
+	background-color: #e9f3fb;
+	padding: 7px;
+	border-radius: 5px;
+}
+
+.img-container {
+	padding: 7px;
+	float: left;
+}
+
+.img-container img {
+	height: 100px;
+	width: 100px;
+	border-radius: 5px;
+	background-color: rgba(191, 224, 249, .6);
+}
+
+.full-display {
+	position: relative;
+	float: right;	
+	width: 470px;
+	height: 470px;
+	overflow: scroll;
+}
+
+.full-display img {
+	width: 100%;
+	height: 100%;
+}
+
+.full-display .caption {
+	position: absolute;
+	padding: 5px;
+	bottom: 0;
+	left: 0;
+	background-color: white;
+	color: black;
+}
+/*=======================================================*/
+/* Layout for manager user table========================*/
+/*=====================================================*/
+.half_left, .half_right {
+	max-width: 45%;
+	display: inline-block;
+	height: 25em;
+	overflow: auto;
+}
+.half_left {
+	margin-left: 2em;
+}
+.half_right {
+	text-align: center;
+	margin-right: 2em;
+	float: right;
+}
+table {
+	border: 0.25em solid #FFF;
+	border-collapse: collapse;
+	background: rgba(255, 255, 255, .99);
+	padding: 10px;
+}
+th {
+	padding: 0.5em 0em;
+	color: white;
+}
+tr:nth-child(odd) {
+	background: #74a1fb;
+}
+td {
+	padding: 0.5em;
+	text-align: center;
+	width: 24%;
+}
+.center_option {
+	margin: 1em auto;
+	display: block;
+}
+.admin_options {
+	color: red;
+	text-decoration: none;
+	cursor: pointer;
+}
+.admin_options:hover {
+	text-decoration: underline;
+}
+.edit_imgs {
+	color: white;
+}
+/*=======================================================*/
+/* Layout for manager page===============================*/
+/*=====================================================*/
+.white_content {
+	background: rgba(230, 230, 240, .5);
+}
+.page_type {
+	padding: 0.25em;
+	display: inline-block;
+}
