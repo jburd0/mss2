@@ -7,25 +7,14 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 	$username = $_POST['username'];
 	$password = md5($_POST['password']);
 	$status = $_POST['user_level'];
-	mkdir("./users/$username/");
-	file_put_contents("./users/$username/credentials.txt", "$username#$password#$status#");
-	header("location: ./manage_users.php");
+	touch("./users/$username");
+	file_put_contents("./users/$username", "$username#$password#$status#");
+	$status = "Added user $username.";
+	header("location: ./manage_users.php?status=$status");
 } elseif (isset($_GET['user'])) {
-	function delete_file($target) {
-		if ( is_dir($target) ) {
-			$files = glob($target. '*', GLOB_MARK);
-			echo $taget;
-			foreach ( $files as $file ) {
-				delete_file($file);
-			}
-			rmdir ($target);
-		} elseif ( is_file($target) ) {
-			unlink($target);
-		}
-	}
 	$user = addslashes($_GET['user']);
-	delete_file("./users/$user");
-	$status = "Deleted user $user";
+	unlink("./users/$user");
+	$status = "Deleted user $user.";
 	header("location: ./manage_users.php?status=$status");
 }
 ?>

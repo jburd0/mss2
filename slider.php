@@ -3,7 +3,7 @@
 <?php
 	if(!$_SESSION['username']) {
 ?>
-			<form action="./index.php" method="POST">
+			<form action="./login.php" method="POST">
 				<fieldset role="login-field-container">
 					<header role="login-header">
 						<h2>Login <small>(Administrators only)</small></h2>

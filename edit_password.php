@@ -8,12 +8,12 @@ if (isset($_POST['password'])) {
 	$new_password = md5($_POST['password']);
 	$old_password = md5($_POST['old_password']);
 	$password_check = md5($_POST['password_check']);
-	$file = file_get_contents("./users/$username/credentials.txt");
+	$file = file_get_contents("./users/$username.txt");
 	$explode = explode('#', "$file");
 	$file_password = $explode['1'];
 	if ($new_password == $password_check) {
 		if ($file_password == $old_password) {
-			file_put_contents("./users/$username/credentials.txt", $explode['0']."#".$new_password."#".$explode['2']."#");
+			file_put_contents("./users/$username", $explode['0']."#".$new_password."#".$explode['2']."#");
 			header("location: ./edit_password.php?status=Password sucessfully changed.");
 		} else {
 			header("location: ./edit_password.php?status=Error opening file.");
