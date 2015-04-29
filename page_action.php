@@ -5,16 +5,21 @@ if(!$_SESSION['username']) {
 	exit;
 }
 if (isset($_GET['page'])) {
-	function delTree($dir) {
-	$page = $_GET['page'];
-	$files = array_diff(scandir($dir), array('.','..'));
-		foreach ($files as $file) {
-				(is_dir("$dir/$file")) ? delTree("$dir/$file") : unlink("$dir/$file");
+	function rrmdir($dir) {
+		if (is_dir($dir)) {
+			$objects = scandir($dir);
+			foreach ($objects as $object) {
+				if ($object != "." && $object != "..") {
+					if (filetype($dir."/".$object) == "dir") rrmdir($dir."/".$object); else unlink($dir."/".$object);
+				}
+			}
+			reset($objects);
+			rmdir($dir);
 		}
-		return rmdir($dir);
 	}
-	if (delTree("./pages/$page/")) {
-		echo "page delete";
+	$page = $_GET['page'];
+	if (rrmdir("./pages/$page/")) {
+		echo "page deleted";
 		header('location: ./manage_pages.php');
 	} else {
 		echo "Problem deleting file.";
