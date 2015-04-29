@@ -35,7 +35,8 @@ $type = $_GET['type'];
 					<?php
 					// include first 16 lines of images.php
 					$array = file("./pages/$page/images.php");
-					for($i = 0; $i < 16; $i++) {
+					$count = count($array);
+					for($i = 0; $i < $count; $i++) {
 						echo $array[$i];
 					}
 					// create blank images so total fills 4 by 4 grid
