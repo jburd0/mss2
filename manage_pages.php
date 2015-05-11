@@ -20,8 +20,16 @@ if(!$_SESSION['username']) {
 				<div class="half_left">
 					<form action="./new_page.php" method="POST">
 						<input type="text" name="page_name" placeholder="Page Name">
-						<div class="page_type">Image Page<input type="radio" name="page_style" value="image_page" id="image_page"><label for="image_page" ><img src="./img/image_page.png" alt="Image page"/></label></div>
-						<div class="page_type">Text Page<input type="radio" name="page_style" value="text_page" id="text_page"><label for="text_page"><img src="./img/text_page.png" alt="Text page"/></label></div>
+						<?php
+						$types = scandir('./pages/');
+						foreach ($types as $type) {
+							if ($type != "." && $type != "..") {
+								echo "<div class=\"page_type\">$type<input type=\"radio\" name=\"page_style\" value=\"$type\" id=\"type\"><label for=\"$type\" ><img src=\"./pages/$type/icon.png\" alt=\"Image page\"/></label></div>";
+							}
+						}
+						/*echo "<div class=\"page_type\">Image Page<input type=\"radio\" name=\"page_style\" value=\"image_page\" id=\"image_page\"><label for=\"image_page\" ><img src=\"./img/image_page.png\" alt=\"Image page\"/></label></div>
+						<div class=\"page_type\">Text Page<input type=\"radio\" name=\"page_style\" value=\"text_page\" id=\"text_page\"><label for=\"text_page\"><img src=\"./img/text_page.png\" alt=\"Text page\"/></label></div>";*/
+						?>
 						<input type="submit" value="Submit">
 					</form>
 				</div>
