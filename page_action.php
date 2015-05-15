@@ -4,7 +4,7 @@ if(!$_SESSION['username']) {
 	header("Location: ./index.php");
 	exit;
 }
-if (isset($_GET['page'])) {
+if (isset($_GET['page']) && isset($_GET['type'])) {
 	function rrmdir($dir) {
 		if (is_dir($dir)) {
 			$objects = scandir($dir);
@@ -18,10 +18,12 @@ if (isset($_GET['page'])) {
 		}
 	}
 	$page = $_GET['page'];
-	if (rrmdir("./pages/$page/")) {
+	$type = $_GET['type'];
+	if (rrmdir("./pages/$type/$page/")) {
 		echo "page deleted";
 		header('location: ./manage_pages.php');
 	} else {
+		echo "./pages/$type/$page/";
 		echo "Problem deleting file.";
 		header('location: ./manage_pages.php');
 	}
